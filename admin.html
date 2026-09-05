@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود مدیر | فروشگاه امیر</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-shell">
+  <div class="login-wrap">
+    <div class="login-card">
+      <h1>ورود مدیر</h1>
+      <p>برای مدیریت محصولات فروشگاه وارد شوید.</p>
+      <form id="login-form">
+        <div class="field">
+          <label for="login-name">نام کاربری</label>
+          <input type="text" id="login-name" autocomplete="username" required>
+        </div>
+        <div class="field">
+          <label for="login-pass">رمز عبور</label>
+          <input type="password" id="login-pass" autocomplete="current-password" required>
+        </div>
+        <p class="form-error" id="login-error"></p>
+        <button type="submit" class="btn btn-dark btn-block">ورود</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

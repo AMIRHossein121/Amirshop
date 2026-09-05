@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل مدیریت | فروشگاه امیر</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-shell">
+
+  <header class="admin-header">
+    <div class="wrap">
+      <div class="brand">پنل مدیریت فروشگاه</div>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <span class="who">وارد شده به‌عنوان Amir</span>
+        <button id="logout-btn" class="btn btn-outline" style="padding:8px 16px;">خروج</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="wrap admin-grid">
+
+      <div class="panel">
+        <h2 id="form-title">افزودن محصول جدید</h2>
+        <p class="hint">اطلاعات محصول را وارد کن و ذخیره کن.</p>
+        <form id="product-form">
+          <div class="field">
+            <label for="f-name">نام محصول</label>
+            <input type="text" id="f-name" required>
+          </div>
+          <div class="field">
+            <label for="f-category">دسته‌بندی</label>
+            <input type="text" id="f-category" placeholder="مثلاً: پوشاک، لوازم دیجیتال">
+          </div>
+          <div class="field">
+            <label for="f-price">قیمت (تومان)</label>
+            <input type="number" id="f-price" min="0" step="1000" required>
+          </div>
+          <div class="field">
+            <label for="f-description">توضیحات</label>
+            <textarea id="f-description"></textarea>
+          </div>
+          <div class="field">
+            <label for="f-image">آدرس تصویر (اختیاری)</label>
+            <input type="text" id="f-image" placeholder="https://...">
+          </div>
+          <div class="field" style="display:flex; align-items:center; gap:8px;">
+            <input type="checkbox" id="f-instock" style="width:auto;" checked>
+            <label for="f-instock" style="margin:0;">موجود است</label>
+          </div>
+          <div style="display:flex; gap:10px;">
+            <button type="submit" class="btn btn-dark">ذخیره محصول</button>
+            <button type="button" id="cancel-edit" class="btn btn-outline" style="display:none; color:var(--ink); border-color:var(--line);">انصراف</button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <div class="panel">
+          <h2>محصولات ثبت‌شده</h2>
+          <p class="hint">تغییرات مستقیماً روی گوگل‌شیت اعمال می‌شود و بلافاصله در صفحه اصلی سایت دیده می‌شود.</p>
+          <p class="form-error" id="panel-status"></p>
+          <div style="overflow-x:auto;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>نام / دسته</th>
+                  <th>قیمت</th>
+                  <th>وضعیت</th>
+                  <th>توضیحات</th>
+                  <th>عملیات</th>
+                </tr>
+              </thead>
+              <tbody id="product-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

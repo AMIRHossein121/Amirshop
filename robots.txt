@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin.html
 Disallow: /admin-panel.html
 
-Sitemap: https://REPLACE-WITH-YOUR-USERNAME.github.io/REPLACE-WITH-REPO-NAME/sitemap.xml
+Sitemap: https://amirhossein121.github.io/Amirshop/sitemap.xml
